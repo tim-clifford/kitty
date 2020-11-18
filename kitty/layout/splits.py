@@ -253,7 +253,7 @@ class Pair:
         if is_horizontal == self.horizontal and not self.is_redundant:
             if which == 2:
                 increment *= -1
-            new_bias = max(0.1, min(self.bias + increment, 0.9))
+            new_bias = max(0.01, min(self.bias + increment, 0.99))
             if new_bias != self.bias:
                 self.bias = new_bias
                 return True
